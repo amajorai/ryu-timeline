@@ -1,0 +1,18 @@
+{
+  "extends": "@ryu/config/tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    // Timeline.tsx is a VERBATIM port of the desktop `pages/TimelinePage.tsx`, whose
+    // tsconfig does not enable `noUncheckedIndexedAccess`. The page relies on
+    // provably-in-bounds array indexing (binary-search helpers, modulo-indexed
+    // `SPEEDS`, the monotonic binning loop); re-enabling the flag here would force
+    // non-null assertions or guards that diverge from the byte-faithful port. Scoped
+    // to this package only.
+    "noUncheckedIndexedAccess": false
+  },
+  "include": ["src/**/*", "vite.config.ts"]
+}
