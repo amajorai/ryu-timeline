@@ -1,0 +1,46 @@
+{
+  "id": "@ryu/timeline",
+  "name": "Timeline",
+  "version": "1.0.0",
+  "category": "Productivity",
+  "description": "The activity replay timeline: a CapCut-style scrubber over Shadow's captured screen/input/window/audio lanes with a keyframe preview, a Dayflow work journal, and jump-to-moment focus.",
+  "icon": "timeline",
+  "iconDither": { "from": 347, "to": 313, "direction": "up" },
+  "surfaces": {
+    "gateway": { "support": "none" },
+    "core": { "support": "none" },
+    "desktop": { "support": "full" },
+    "island": { "support": "limited" },
+    "mobile": { "support": "limited" },
+    "extension": { "support": "none" },
+    "web": { "support": "full" },
+    "cli": { "support": "list" }
+  },
+  "engines": {
+    "ryu": ">=0.1.0"
+  },
+  "runnables": [
+    {
+      "id": "timeline-companion",
+      "name": "Timeline",
+      "kind": "companion",
+      "config": {
+        "label": "Timeline",
+        "ui_entry": "./dist/index.html",
+        "ui_format": "html"
+      }
+    }
+  ],
+  "permission_grants": ["timeline:read", "shell:integrate"],
+  "permission_levels": [
+    {
+      "id": "timeline.view",
+      "label": "Can view",
+      "description": "Replay Shadow's captured screen, window, and audio lanes and the work journal built from them, which exposes everything recorded on this machine."
+    }
+  ],
+  "companion": {
+    "label": "Timeline",
+    "icon": "timeline"
+  }
+}
