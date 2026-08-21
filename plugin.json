@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.timeline",
+  "version": "0.1.14",
+  "description": "The activity replay timeline: a CapCut-style scrubber over Shadow's captured screen/input/window/audio lanes with a keyframe preview, a Dayflow work journal, and jump-to-moment focus.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu-timeline",
+  "repository": "https://github.com/amajorai/ryu-timeline",
+  "keywords": [
+    "timeline",
+    "replay",
+    "screen",
+    "journal"
+  ],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/timeline",
+      "displayName": "Timeline"
+    }
+  }
+}
