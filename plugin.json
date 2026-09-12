@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.timeline",
+  "version": "0.1.14",
+  "description": "The activity timeline with Replay lanes and a chronological History view over Shadow's captured screen/input/window/audio lanes, plus a keyframe preview, Dayflow work journal, and jump-to-moment focus.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu-timeline",
+  "repository": "https://github.com/amajorai/ryu-timeline",
+  "keywords": ["timeline", "replay", "screen", "journal"],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/timeline",
+      "displayName": "Timeline"
+    }
+  }
+}
