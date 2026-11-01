@@ -1,0 +1,403 @@
+{
+  "version": 1,
+  "package": "timeline",
+  "scope": "complete",
+  "expectedRows": 30,
+  "selector": {
+    "config": "e2e/timeline-companion.playwright.config.ts",
+    "spec": "e2e/timeline-companion.spec.ts"
+  },
+  "evidenceBoundary": "Rendered Chromium flows use fixture responses from Timeline's actual window.ryu bridge. They verify user-visible state and shell-route requests, not live Shadow capture, physical keyframes, or a real LLM provider.",
+  "assertions": [
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "661",
+        "component": "Timeline",
+        "tag": "ToggleGroup",
+        "events": "onValueChange"
+      },
+      "testTitle": "journal history opens a selected focus block in replay",
+      "assertionName": "The view switch displays chronological journal history and can return a selected block to replay.",
+      "assertionMarker": "Timeline view"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "683",
+        "component": "Timeline",
+        "tag": "Select",
+        "events": "onValueChange"
+      },
+      "testTitle": "changing the range reloads the matching timeline and journal",
+      "assertionName": "Selecting a time range reloads both data sources with the new range.",
+      "assertionMarker": "Last 15 min"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "692",
+        "component": "Timeline",
+        "tag": "SelectTrigger",
+        "events": ""
+      },
+      "testTitle": "changing the range reloads the matching timeline and journal",
+      "assertionName": "The range trigger opens a selectable list and displays the chosen value.",
+      "assertionMarker": "Last 15 min"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "763",
+        "component": "Timeline",
+        "tag": "Button",
+        "events": "onPointerDown"
+      },
+      "testTitle": "resizing the player changes its rendered preview height",
+      "assertionName": "Dragging the resize handle changes the displayed player height.",
+      "assertionMarker": "Resize player"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "889",
+        "component": "renderBody",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "timeline errors recover through Try again",
+      "assertionName": "Retry after a failed Shadow request reloads and displays captured data.",
+      "assertionMarker": "Try again"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "910",
+        "component": "renderBody",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "recording-off state routes the user to Settings",
+      "assertionName": "The recording-off state opens the Settings route through the host shell.",
+      "assertionMarker": "Open settings"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1041",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "journal history opens a selected focus block in replay",
+      "assertionName": "A journal block in History opens replay at that block's start.",
+      "assertionMarker": "Open Deep-work sprint in replay"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1104",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "raw history fallback opens the selected captured event",
+      "assertionName": "When journal data is unavailable, selecting a raw event opens its moment in replay.",
+      "assertionMarker": "Open Review product brief in replay"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1368",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "AI polish refreshes journal copy and Weekly review opens",
+      "assertionName": "Turning AI polish on requests narrated journal data and displays the returned copy.",
+      "assertionMarker": "Polish with AI"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1378",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "AI polish refreshes journal copy and Weekly review opens",
+      "assertionName": "Weekly review opens the expected route and title through the host shell.",
+      "assertionMarker": "Weekly review"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1386",
+        "component": "module",
+        "tag": "JournalCardButton",
+        "events": ""
+      },
+      "testTitle": "a replay journal card seeks to its start time",
+      "assertionName": "Selecting a work journal card moves the replay playhead to the card's start.",
+      "assertionMarker": "Deep-work sprint"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1415",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "a replay journal card seeks to its start time",
+      "assertionName": "The rendered journal card button seeks to its associated block.",
+      "assertionMarker": "Deep-work sprint"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1529",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "replay transport changes time, zoom, speed, and saved hover mode",
+      "assertionName": "Step backward moves the visible playback position earlier.",
+      "assertionMarker": "Step backward"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1538",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "replay transport changes time, zoom, speed, and saved hover mode",
+      "assertionName": "Play advances the clock and Pause stops playback.",
+      "assertionMarker": "Play"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1547",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "replay transport changes time, zoom, speed, and saved hover mode",
+      "assertionName": "Step forward moves the visible playback position later.",
+      "assertionMarker": "Step forward"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1556",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "replay transport changes time, zoom, speed, and saved hover mode",
+      "assertionName": "Now returns the playback clock to the live edge.",
+      "assertionMarker": "Now"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1572",
+        "component": "module",
+        "tag": "TooltipTrigger",
+        "events": ""
+      },
+      "testTitle": "visible help tooltips explain hover, playback speed, and zoom",
+      "assertionName": "The hover help explains how cursor movement affects the playhead.",
+      "assertionMarker": "Hover preview on:"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1575",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "replay transport changes time, zoom, speed, and saved hover mode",
+      "assertionName": "Hover preview follows the pointer when enabled, stays still when disabled, and persists.",
+      "assertionMarker": "Hover"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1594",
+        "component": "module",
+        "tag": "TooltipTrigger",
+        "events": ""
+      },
+      "testTitle": "visible help tooltips explain hover, playback speed, and zoom",
+      "assertionName": "The playback-speed tooltip explains the cycle action.",
+      "assertionMarker": "Playback speed — click to cycle"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1597",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "replay transport changes time, zoom, speed, and saved hover mode",
+      "assertionName": "Playback speed cycles through 1×, 10×, and 60×.",
+      "assertionMarker": "Playback speed"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1612",
+        "component": "module",
+        "tag": "TooltipTrigger",
+        "events": ""
+      },
+      "testTitle": "visible help tooltips explain hover, playback speed, and zoom",
+      "assertionName": "The Zoom out tooltip explains its action.",
+      "assertionMarker": "Zoom out"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1615",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "replay transport changes time, zoom, speed, and saved hover mode",
+      "assertionName": "Zoom out reverses a zoom-in and restores a smaller event lane.",
+      "assertionMarker": "Zoom out"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1629",
+        "component": "module",
+        "tag": "TooltipTrigger",
+        "events": ""
+      },
+      "testTitle": "visible help tooltips explain hover, playback speed, and zoom",
+      "assertionName": "The Zoom in tooltip explains its action.",
+      "assertionMarker": "Zoom in"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1632",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "replay transport changes time, zoom, speed, and saved hover mode",
+      "assertionName": "Zoom in increases the rendered time-lane width.",
+      "assertionMarker": "Zoom in"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1686",
+        "component": "module",
+        "tag": "Button",
+        "events": "onPointerDown"
+      },
+      "testTitle": "ruler, lanes, and event marks seek the playhead",
+      "assertionName": "Pointer-scrubbing the time ruler moves the visible playback position.",
+      "assertionMarker": "Scrub timeline"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1809",
+        "component": "module",
+        "tag": "div",
+        "events": "onPointerDown"
+      },
+      "testTitle": "ruler, lanes, and event marks seek the playhead",
+      "assertionName": "Pointer-scrubbing a capture lane updates the same playhead.",
+      "assertionMarker": "Screen lane"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1818",
+        "component": "module",
+        "tag": "TooltipTrigger",
+        "events": ""
+      },
+      "testTitle": "visible help tooltips explain hover, playback speed, and zoom",
+      "assertionName": "TooltipTrigger help content opens when a Timeline control receives keyboard focus.",
+      "assertionMarker": "Zoom in"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1821",
+        "component": "module",
+        "tag": "button",
+        "events": "onClick,onPointerDown"
+      },
+      "testTitle": "ruler, lanes, and event marks seek the playhead",
+      "assertionName": "A captured-event tick is keyboard focusable and seeks its moment on Enter.",
+      "assertionMarker": "Screen event Review product brief at"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1329",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "failed journal refresh retries exactly once",
+      "assertionName": "Retry journal on the empty journal error reloads the journal exactly once",
+      "assertionMarker": "Retry journal"
+    },
+    {
+      "row": {
+        "package": "timeline",
+        "source_file": "apps-store/timeline/ui/src/Timeline.tsx",
+        "line": "1352",
+        "component": "module",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "a failed refresh keeps existing journal cards and retries inline",
+      "assertionName": "The inline Retry journal keeps existing cards and retries the current range",
+      "assertionMarker": "Retry journal"
+    }
+  ]
+}
