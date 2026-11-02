@@ -1,0 +1,9 @@
+.width {
+	width: var(--timeline-width);
+}
+.left {
+	left: var(--timeline-left);
+}
+.iconLayer {
+	z-index: var(--timeline-icon-layer);
+}
